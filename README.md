@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open the URL Astro prints. `/` goes to the invitation. `/photos` says coming soon.
+Open the URL Astro prints. `/` is the invitation. `/photos` says coming soon.
 
 ## Publish on GitHub Pages
 
@@ -19,7 +19,7 @@ Pushes to `main` build the site and deploy the `dist` folder. In the GitHub repo
 
 ## Custom subdomain
 
-The site is meant to be served at your own subdomain, at the root (`/invitation`, not `/wedding/invitation`). Three things have to match:
+The site is meant to be served at your own subdomain. The invitation is the root (`/`), and photos are `/photos`. Three things have to match:
 
 1. Replace `wedding.example.com` in `public/CNAME` with the real hostname, and set the same hostname as `site` in `astro.config.mjs`.
 2. In the GitHub repo, set Pages to GitHub Actions.
@@ -34,4 +34,4 @@ In `src/config.ts`:
 - Set `photos` to `"open"` when the pictures should replace “Coming soon.”
 - Set `defaultView` to `"photos"` when the gallery should be what people see first.
 
-Commit and push. Invitation remains at `/invitation`.
+Commit and push. The invitation stays at `/` until the gallery is set as the first page.

@@ -1,6 +1,23 @@
 ---
+import Nav from '../components/Nav.astro';
 import { site } from '../config';
 
-const target = site.defaultView === 'photos' ? '/photos' : '/invitation';
-return Astro.redirect(target);
+if (site.defaultView === 'photos') {
+  return Astro.redirect('/photos');
+}
 ---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Invitation</title>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <h1>Invitation</h1>
+      <p>The invitation has not been designed yet.</p>
+    </main>
+  </body>
+</html>

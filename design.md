@@ -13,9 +13,9 @@ Both Invitation and Photos stay in the menu at all times.
 | `defaultView` in `src/config.ts` | `invitation` | `photos`, when the gallery should be the first page |
 | `photos` in `src/config.ts` | `coming-soon` | `open`, when pictures should be shown |
 
-- `/` follows `defaultView`.
-- `/invitation` always shows the invitation.
+- `/` is the invitation. There is no `/invitation` page.
 - `/photos` shows “Coming soon” while `photos` is `coming-soon`. When it is `open`, it shows the gallery.
+- Setting `defaultView` to `photos` makes `/` open `/photos`. The invitation then needs its own address, which is added when that switch is made.
 - Changing either value is a commit. GitHub Actions publishes it. There is no server-side switch.
 
 ## Elements
