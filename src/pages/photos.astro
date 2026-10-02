@@ -1,0 +1,21 @@
+---
+import Nav from '../components/Nav.astro';
+import { site } from '../config';
+
+const open = site.photos === 'open';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photos</title>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <h1>Photos</h1>
+      {open ? <p>No pictures have been added yet.</p> : <p>Coming soon</p>}
+    </main>
+  </body>
+</html>

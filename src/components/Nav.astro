@@ -1,0 +1,26 @@
+---
+const path = Astro.url.pathname;
+const onInvitation = path === '/invitation' || path.startsWith('/invitation/');
+const onPhotos = path === '/photos' || path.startsWith('/photos/');
+---
+
+<nav>
+  <a href="/invitation" aria-current={onInvitation ? 'page' : undefined}>Invitation</a>
+  <a href="/photos" aria-current={onPhotos ? 'page' : undefined}>Photos</a>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a[aria-current='page'] {
+    text-decoration: underline;
+  }
+</style>
