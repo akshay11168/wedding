@@ -19,13 +19,14 @@ Pushes to `main` build the site and deploy the `dist` folder. In the GitHub repo
 
 ## Custom subdomain
 
-The site is meant to be served at your own subdomain. The invitation is the root (`/`), and photos are `/photos`. Three things have to match:
+The site is meant to be served at your own subdomain. The invitation is the root (`/`), and photos are `/photos`. These have to match:
 
-1. Replace `wedding.example.com` in `public/CNAME` with the real hostname, and set the same hostname as `site` in `astro.config.mjs`.
-2. In the GitHub repo, set Pages to GitHub Actions.
-3. At your DNS host, add a CNAME record from that subdomain to `akshay11168.github.io`.
+1. Set `site` in `astro.config.mjs` to the real hostname. `public/CNAME` should contain that same hostname.
+2. In the GitHub repo, set Settings → Pages → Source to **GitHub Actions**.
+3. In that same Pages screen, enter the hostname under **Custom domain** and save it. With a GitHub Actions deploy, GitHub ignores the `CNAME` file for this setting, so the field has to be saved here or the subdomain returns “There isn’t a GitHub Pages site here.”
+4. At your DNS host, add a CNAME record from that subdomain to `akshay11168.github.io`.
 
-GitHub then issues HTTPS for the subdomain. Until those three exist, the site is only the local preview.
+GitHub then issues HTTPS for the subdomain. Until the custom domain is saved, `https://akshay11168.github.io/wedding/` serves the HTML only: styles and images are built for the domain root and do not load from the `/wedding/` path.
 
 ## Switch the gallery on
 

@@ -64,5 +64,5 @@ The pieces used on the page are copied into `public/art`, one file per picture. 
 
 ## Open questions
 
-- Subdomain hostname. `public/CNAME` and `site` in `astro.config.mjs` still say `wedding.example.com`.
+- Subdomain is `wedding.biradarakshay.com`. It is set in `public/CNAME`, in `site` in `astro.config.mjs`, and in the repo’s Pages custom-domain field.
 - Final copy and dates. The reference image is not the locked text.
