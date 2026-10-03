@@ -1,6 +1,8 @@
 ---
 import Nav from '../components/Nav.astro';
 import { site } from '../config';
+import '../styles/site.css';
+import '../styles/invitation.css';
 
 if (site.defaultView === 'photos') {
   return Astro.redirect('/photos');
@@ -11,13 +13,219 @@ if (site.defaultView === 'photos') {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Invitation</title>
+    <title>Debadrita & Akshay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Outfit:wght@400;500&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <Nav />
-    <main>
-      <h1>Invitation</h1>
-      <p>The invitation has not been designed yet.</p>
-    </main>
+    <article class="invite">
+      <header class="band hero">
+        <Nav />
+        <div class="hero-inner">
+          <p class="site-nav" style="padding-top:0">
+            <a href="#events">Get event details</a>
+            <a href="#attire">Get dress code</a>
+          </p>
+          <h1 class="names">Debadrita <span>&</span> Akshay</h1>
+          <figure class="polaroid">
+            <img src="/art/orchids.png" class="sticker orchids-l" alt="" />
+            <img src="/art/red-flowers.png" class="sticker orchids-r" alt="" />
+            <img src="/art/photo-boat.jpg" alt="Debadrita and Akshay on a boat at sunset" />
+            <img src="/art/tulips.png" class="sticker tulips" alt="" />
+            <img src="/art/seal-heart.png" class="sticker seal-heart" alt="" />
+            <img src="/art/moth.png" class="sticker moth" alt="" />
+          </figure>
+          <p class="married">are getting married</p>
+          <p class="date">Kolkata, January 26th, 2027</p>
+        </div>
+      </header>
+
+      <section class="band east" aria-labelledby="east-title">
+        <div class="east-inner">
+          <h2 id="east-title">From <em>East to West</em> ...</h2>
+          <div class="east-grid">
+            <div class="blurb">
+              <h3>Phuchka vs Panipuri</h3>
+              <p>Add additional details here.</p>
+            </div>
+            <div class="blurb">
+              <h3>Love at first fish bite</h3>
+              <p>Add additional details here.</p>
+            </div>
+            <div class="heart-wrap">
+              <img src="/art/heart.png" alt="" />
+            </div>
+            <div class="blurb">
+              <h3>Phuchka vs Panipuri</h3>
+              <p>Add additional details here.</p>
+            </div>
+            <div class="blurb">
+              <h3>The waters ahead</h3>
+              <p>Add additional details here.</p>
+            </div>
+          </div>
+          <div class="frames">
+            <div class="frame">
+              <img class="gold" src="/art/frame.png" alt="" />
+              <img class="fill" src="/art/hands.png" alt="" />
+            </div>
+            <div class="frame">
+              <img class="gold" src="/art/frame.png" alt="" />
+              <img class="fill" src="/art/bench.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band doodles" aria-label="Illustrated details">
+        <div class="doodle-board">
+          <img class="d1" src="/art/cloud.png" alt="" />
+          <img class="d2" src="/art/phone.png" alt="" />
+          <img class="d3" src="/art/burst.png" alt="" />
+          <img class="d4" src="/art/speech.png" alt="" />
+          <img class="d5" src="/art/megaphone.png" alt="" />
+          <img class="d6" src="/art/cupid.png" alt="" />
+          <img class="d7" src="/art/arrows.png" alt="" />
+          <img class="d8" src="/art/hearts.png" alt="" />
+          <img class="d9" src="/art/smiley.png" alt="" />
+          <img class="d10" src="/art/bow.png" alt="" />
+          <img class="d11" src="/art/plane.png" alt="" />
+          <img class="d12" src="/art/tulip.png" alt="" />
+        </div>
+      </section>
+
+      <section class="band lace" id="letter" aria-label="Letter">
+        <div class="letter">
+          <div class="letter-scene">
+            <div class="env-body">
+              <img class="lining" src="/art/envelope-open.png" alt="" />
+              <img class="envelope" src="/art/envelope.png" alt="" />
+            </div>
+            <div class="flap">
+              <div class="flap-paper"></div>
+              <button class="seal-hit" type="button" aria-expanded="false" aria-controls="letter-view">
+                <img class="seal" src="/art/seal.png" alt="" />
+                <span class="monogram">DA</span>
+                <span class="sr-only">Open the letter</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <div class="letter-view" id="letter-view" hidden>
+      <button class="letter-back" type="button">Back</button>
+      <section class="band events" id="events">
+        <div class="events-inner event-collage">
+          <figure class="tilt left">
+            <img src="/art/photo-victoria.jpg" alt="Victoria Memorial, Kolkata" />
+          </figure>
+          <article class="card">
+            <h3>Maharashtrian & Bengali wedding ceremony</h3>
+            <p>January 26th, 2027</p>
+            <p>4th & 5th Floor, NKDA, Action Area 1, New Town, Kolkata</p>
+          </article>
+          <figure class="tilt right">
+            <img src="/art/photo-hands.jpg" alt="Hands at sunset" />
+          </figure>
+          <article class="card">
+            <h3>Haldi & Sangeet</h3>
+            <p>January 25th, 2027</p>
+            <p>Ground Floor, NKDA Lawn, Action Area 1, New Town, Kolkata</p>
+          </article>
+          <img src="/art/taxi.png" alt="" width="180" />
+          <img src="/art/hibiscus.png" alt="" width="140" />
+        </div>
+      </section>
+
+      <section class="band notes" aria-labelledby="about-title">
+        <div class="notes-inner">
+          <h2 id="about-title">About the <em>events</em></h2>
+          <div class="note-row">
+            <article class="note">
+              <h3>Ceremony</h3>
+              <p>Add additional details here.</p>
+            </article>
+            <article class="note">
+              <h3>Reception</h3>
+              <p>Add additional details here.</p>
+            </article>
+            <article class="note" id="attire">
+              <h3>Attire</h3>
+              <p>Add additional details here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band schedule" aria-labelledby="schedule-title">
+        <div class="schedule-inner">
+          <div>
+            <h2 id="schedule-title"><em>Schedule</em> of the events</h2>
+            <p class="when">Kolkata, January 25th & 26th, 2027</p>
+            <img src="/art/lantern.png" alt="" width="120" />
+          </div>
+          <div>
+            <article>
+              <h3>3:30 PM — Guest arrival & welcome drinks</h3>
+              <p>Sip, settle in, and enjoy the view.</p>
+            </article>
+            <article>
+              <h3>4:30 PM — Wedding ceremony</h3>
+              <p>Our vows by the sea.</p>
+            </article>
+            <article>
+              <h3>5:30 PM — Sunset cocktails & photos</h3>
+              <p>Light bites and drinks while we capture golden hour.</p>
+            </article>
+            <article>
+              <h3>6:30 PM — Dinner & celebration</h3>
+              <p>A relaxed evening with food, toasts, and dancing.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band gift">
+        <div class="gift-inner">
+          <img class="cameo" src="/art/cameo.png" alt="" />
+          <h2>Your <em>presence</em> is the greatest gift of all.</h2>
+          <p>Add additional details here.</p>
+          <div class="boats">
+            <img src="/art/boat.png" alt="" />
+            <img src="/art/boat-2.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <div class="filmstrip" aria-label="Illustrated scenes">
+        <img src="/art/dance.png" alt="" />
+        <img src="/art/run.png" alt="" />
+        <img src="/art/couple-red.png" alt="" />
+        <img src="/art/car.png" alt="" />
+      </div>
+
+      <footer class="band rsvp">
+        <p class="hashtag">#SeeYouAtTheAisle</p>
+        <div class="plaque">
+          <img class="board" src="/art/plaque.png" alt="" />
+          <div class="words">
+            <h2>RSVP</h2>
+            <p>by Dec 1st, 2026</p>
+          </div>
+        </div>
+        <div class="rsvp-art">
+          <img class="breath" src="/art/breath.png" alt="" />
+          <img class="phone" src="/art/telephone.png" alt="" />
+          <img class="stripes" src="/art/stripes.png" alt="" />
+          <img class="breath" src="/art/breath.png" alt="" />
+        </div>
+      </footer>
+    </div>
+    <script>
+      import '../scripts/letter.js';
+    </script>
   </body>
 </html>

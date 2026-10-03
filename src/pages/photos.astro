@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import { site } from '../config';
+import '../styles/site.css';
 
 const open = site.photos === 'open';
 ---
@@ -10,8 +11,11 @@ const open = site.photos === 'open';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Photos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;500&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="photos-page">
     <Nav />
     <main>
       <h1>Photos</h1>

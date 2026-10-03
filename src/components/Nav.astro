@@ -4,23 +4,7 @@ const onInvitation = path === '/' || path === '';
 const onPhotos = path === '/photos' || path.startsWith('/photos/');
 ---
 
-<nav>
-  <a href="/" aria-current={onInvitation ? 'page' : undefined}>Invitation</a>
-  <a href="/photos" aria-current={onPhotos ? 'page' : undefined}>Photos</a>
-</nav>
-
-<style>
-  nav {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  a[aria-current='page'] {
-    text-decoration: underline;
-  }
-</style>
+<ul class="site-nav">
+  <li><a href="/" aria-current={onInvitation ? 'page' : undefined}>Invitation</a></li>
+  <li><a href="/photos" aria-current={onPhotos ? 'page' : undefined}>Photos</a></li>
+</ul>
